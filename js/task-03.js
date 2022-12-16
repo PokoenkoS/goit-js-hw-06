@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const ingrListEl = document.querySelector(`.gallery`);
+
+const element = images.map((option)=>
+`<li> <img src="${option.url}" alt:"${option.alt}"  width = "500" height = "400"> </img></li>`
+).join("");
+
+ingrListEl.insertAdjacentHTML(`afterbegin`, element);
+console.log(ingrListEl);
+
+
