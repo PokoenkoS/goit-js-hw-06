@@ -1,7 +1,7 @@
 const inputEl = document.querySelector(`#validation-input`);
 
 const lengthEl = inputEl.getAttribute("data-length");
-console.log(lengthEl);
+
 
 inputEl.addEventListener(`blur`, onInputBlur);
 
@@ -10,12 +10,9 @@ function onInputBlur(event) {
         inputEl.classList.add(`valid`);
             
     } else {
-      
-        inputEl.classList.add(`invalid`);
-
+     inputEl.classList.add(`invalid`);
  
 }
 console.log(event.currentTarget.value);
 
 };
- 

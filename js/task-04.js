@@ -1,23 +1,27 @@
 const counterValue = {
-value : 0,
+     value: 0,
+     increment(){
+          this.value +=1;
+     },
+     decrement(){
+          this.value -=1;
+     }
 };
+
 
 const decrement = document.querySelector(`[data-action="decrement"]`);
 const increment = document.querySelector(`[data-action="increment"]`);
 const valueEl = document.querySelector(`#value`);
 
-decrement.addEventListener(`click`, (event)=> {
-counterValue.value -= event;
+decrement.addEventListener(`click`, ()=> {
+counterValue.decrement()
 valueEl.textContent = counterValue.value;
 })
-console.log(decrement);
 
 
-increment.addEventListener(`click`, (event) =>{
-     counterValue.value += event;
+increment.addEventListener(`click`, () =>{
+     counterValue.increment()
      valueEl.textContent = counterValue.value;
-     console.log(counterValue);
 })
-console.log(increment);
 
-console.log(counterValue);
+
