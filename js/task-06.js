@@ -6,6 +6,7 @@ const lengthEl = inputEl.getAttribute("data-length");
 inputEl.addEventListener(`blur`, onInputBlur);
 
 function onInputBlur(event) {
+    
     if (Number(event.currentTarget.value.length) === Number(lengthEl)) {
         inputEl.classList.add(`valid`);
             
